@@ -1,5 +1,7 @@
-This script joins the csv files downloaded from Adestra to make this process a little bit more automated.
+##Merge Adestra CSVs
 
-The CSVs have to be saved to the 'files' directory, each file has to have it's filename as the date downloaded from adestra in format 'YYYY-MM-DD'.
+######This script joins the csv files downloaded from Adestra to make this process a little bit more automated.
 
-The script will spit out a 'merged.csv' file ready to copy to the Email Acquisition sheet.
+The CSVs have to be saved to a 'files' directory, each file has to be named as the date downloaded from adestra in format 'YYYY-MM-DD'.
+
+The script will spit out a 'merged.csv' file and upload it to the instance running matillion. **Remember to change the 'matillion_usrname' variable to your ssh user and to be connected to the VPN!**

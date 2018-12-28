@@ -1,10 +1,14 @@
-import os, csv, datetime
+import os, csv
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-out_filename = 'merged-' + str(datetime.datetime.now()) + '.csv'
+out_filename = 'merged.csv'
+
+matillion_usrname = 'ngonik'
+
+if os.path.exists(out_filename):
+    os.remove(out_filename)
 
 os.chdir('files')
-
 if os.path.exists(".DS_STORE"):
     os.remove(".DS_STORE")
 
@@ -29,3 +33,10 @@ for file in os.listdir():
                 csvfile.write('\n')
         
         i += 1
+
+os.chdir(dir_path)
+print('Make sure you are connected to the VPN!')
+bashCommand = "scp merged.csv %s@matillion.consumeraffairs.com:/tmp/merged.csv" % matillion_usrname 
+import subprocess
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
