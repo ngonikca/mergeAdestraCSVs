@@ -1,6 +1,6 @@
-##Merge Adestra CSVs
+## Merge Adestra CSVs
 
-######This script joins the csv files downloaded from Adestra to make this process a little bit more automated.
+###### This script joins the csv files downloaded from Adestra to make this process a little bit more automated.
 
 The CSVs have to be saved to a 'files' directory, each file has to be named as the date downloaded from adestra in format 'YYYY-MM-DD'.
 
