@@ -1,7 +1,7 @@
-import os, webbrowser, pyperclip, datetime
+import os, sys, webbrowser, pyperclip, datetime
 
 numdays = 7
-first_date_str = '2018-12-21'
+first_date_str = sys.argv[1]
 first_date_obj = datetime.datetime.strptime(first_date_str, '%Y-%m-%d').date()
 date_list = [first_date_obj + datetime.timedelta(days=x) for x in range(0, numdays)]
 
