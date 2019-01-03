@@ -27,7 +27,7 @@ for file in os.listdir():
         
         for row in csvread:
             row.append(filename)
-            row_final = ', '.join(row)
+            row_final = ','.join(row)
 
             #abrimos el csv final
             with open(os.path.join(os.pardir, out_filename), 'a') as csvfile:
