@@ -1,4 +1,6 @@
-import os, csv
+import os, csv, subprocess, sys, webbrowser, pyperclip, datetime
+
+print("Starting to merge downloaded files.")
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 out_filename = 'merged.csv'
@@ -35,8 +37,7 @@ for file in os.listdir():
         i += 1
 
 os.chdir(dir_path)
-print('Make sure you are connected to the VPN!')
-bashCommand = "scp merged.csv %s@matillion.consumeraffairs.com:/tmp/merged.csv" % matillion_usrname 
-import subprocess
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
+#print('Make sure you are connected to the VPN!')
+#bashCommand = "scp merged.csv %s@matillion.consumeraffairs.com:/tmp/merged.csv" % matillion_usrname
+#process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+#output, error = process.communicate()
