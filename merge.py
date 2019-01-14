@@ -1,4 +1,4 @@
-import os, csv, subprocess, sys, webbrowser, pyperclip, datetime
+import os, csv, subprocess, sys, webbrowser, datetime
 
 print("Starting to merge downloaded files.")
 
